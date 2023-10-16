@@ -1,0 +1,57 @@
+import random
+import time
+words = ["apple", "banana", "cherry", "orange", "grape", "pineapple", "melon", "strawberry", "kiwi", "blueberry"]
+score = 0
+def typing_game():
+    global score
+    word = random.choice(words)
+    print("Type the word:", word)
+    start_time = time.time()
+    user_input = input()
+    end_time = time.time()
+    elapsed_time = round(end_time - start_time, 2)
+    
+    if user_input == word:
+        score += 1
+        print("Correct!")
+    else:
+        print("Wrong!")
+    
+    print("Time =", elapsed_time, "seconds")
+    print("Score =", score)
+while True:
+    typing_game()
+
+JothamJ4k
+JothamJ4k
+make me a cool neon dsplay function
+
+
+AI
+AI
+used
+
+Generate code
+Python
+
+Copy
+
+Insert
+import turtle
+def neon_display(text):
+    colors = ['red', 'blue', 'green', 'orange', 'purple']
+    t = turtle.Turtle()
+    t.width(3)
+    t.speed(3)
+    
+    for i in range(5):
+        t.color(colors[i % len(colors)])
+        for char in text:
+            t.write(char, move=True, font=("Arial", 30, "normal"))
+            t.pendown()
+            t.penup()
+            t.forward(30)
+        t.goto(0, t.ycor() - 50)
+    
+    turtle.done()
+
